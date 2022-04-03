@@ -1,0 +1,56 @@
+{
+    "name": "rpsimao/invoicexpress-api",
+    "description": "Laravel Package to interact with InvoiceXpress API",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "rpsimao",
+        "invoicexpress-api",
+        "invoicexpress",
+        "api"
+    ],
+    "homepage": "https://github.com/rpsimao/invoicexpress-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Simão",
+            "email": "ricardo.simao@upgrade.pt"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "guzzlehttp/guzzle": "^6.2.1",
+        "guzzlehttp/psr7": "^1.4.1",
+        "guzzlehttp/promises": "~1.0",
+        "laravel/framework": "5.4.*",
+        "illuminate/support": "5.4.*",
+        "spatie/array-to-xml": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "rpsimao\\InvoiceXpressAPI\\": "src/"
+        },
+        "files":[
+            "src/Helpers/invoicexpress-api.php"
+        ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1",
+        "orchestra/testbench": "^3.4"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "rpsimao\\InvoiceXpressAPI\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "rpsimao\\InvoiceXpressAPI\\InvoiceXpressAPIServiceProvider"
+        ],
+        "aliases": {
+            "InvoiceXpressClients": "rpsimao\\InvoiceXpressAPI\\InvoiceXpressAPIFacade"
+           }
+        }
+    }
+}
